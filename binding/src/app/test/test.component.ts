@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
   <h2>
              Welcome {{name}}
              </h2>
+             <h2 class="text-success">codevolution</h2>
+             <h2 [class]="successclass">codevolution</h2>
+             <h2 class="text-special" [class]="successclass">codevolution</h2>
+             <h2 [class.text-danger]="haserror">codevolution</h2>
+
+
              <h2>{{2+2}}</h2>
              <h2>{{"welcome  "+ name}}
              <h2>{{name.length}}</h2>
@@ -18,7 +24,18 @@ import { Component, OnInit } from '@angular/core';
              <input bind-disabled="isdisabled" id={{myid}} type="text" value="Jacinta">
 
              `,
-  styles: []
+  styles: [`
+  .text-success {
+    color:green;
+  }
+  .text-danger {
+    color:red;
+  }
+  .text-special {
+    color:italic;
+  }
+
+  `]
 })
 export class TestComponent implements OnInit {
 
@@ -27,6 +44,8 @@ export class TestComponent implements OnInit {
   public siteurl=window.location.href;
   public myid="testid";
   public isdisabled=false;
+  public successclass="text-success";
+  public haserror=true;
   ngOnInit() {
   }
 greetuser(){
