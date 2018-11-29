@@ -12,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
              <h2 [class]="successclass">codevolution</h2>
              <h2 class="text-special" [class]="successclass">codevolution</h2>
              <h2 [class.text-danger]="haserror">codevolution</h2>
+             <h2 [ngClass]="messageclasses"> codevolution</h2>
 
 
              <h2>{{2+2}}</h2>
@@ -22,7 +23,6 @@ import { Component, OnInit } from '@angular/core';
              <h2>{{siteurl}}</h2>
              <input [id]="myid" type="text" value="Jacinta">
              <input bind-disabled="isdisabled" id={{myid}} type="text" value="Jacinta">
-
              `,
   styles: [`
   .text-success {
@@ -32,7 +32,7 @@ import { Component, OnInit } from '@angular/core';
     color:red;
   }
   .text-special {
-    color:italic;
+    font-style: italic;
   }
 
   `]
@@ -46,6 +46,14 @@ export class TestComponent implements OnInit {
   public isdisabled=false;
   public successclass="text-success";
   public haserror=true;
+  public isspecial=true;
+  public messageclasses={
+    "text-success": !this.haserror,
+    "text-danger": this.haserror,
+    "text-special": this.isspecial
+
+
+  }
   ngOnInit() {
   }
 greetuser(){
