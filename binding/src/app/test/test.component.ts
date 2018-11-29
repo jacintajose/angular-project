@@ -15,7 +15,7 @@ import { Component, OnInit } from '@angular/core';
              <h2>{{greetuser()}}</h2>
              <h2>{{siteurl}}</h2>
              <input [id]="myid" type="text" value="Jacinta">
-             <input [disabled]="isdisabled" id={{myid}} type="text" value="Jacinta">
+             <input bind-disabled="isdisabled" id={{myid}} type="text" value="Jacinta">
 
              `,
   styles: []
