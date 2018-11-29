@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
              </h2>
              <h2>{{2+2}}</h2>
              <h2>{{"welcome  "+ name}}
+             <h2>{{name.length}}
+             <h2>{{name.toUpperCase()}}</h2>
              `,
   styles: []
 })
