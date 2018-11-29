@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   <h2>
              Welcome {{name}}
              </h2>
+             <h2>{{2+2}}</h2>
+             <h2>{{"welcome  "+ name}}
              `,
   styles: []
 })
