@@ -14,7 +14,9 @@ import { Component, OnInit } from '@angular/core';
              <h2>{{name.toUpperCase()}}</h2>
              <h2>{{greetuser()}}</h2>
              <h2>{{siteurl}}</h2>
-             <input type="text" value="Jacinta">
+             <input [id]="myid" type="text" value="Jacinta">
+             <input [disabled]="isdisabled" id={{myid}} type="text" value="Jacinta">
+
              `,
   styles: []
 })
@@ -23,6 +25,8 @@ export class TestComponent implements OnInit {
   constructor() { }
   public name="Jacinta";
   public siteurl=window.location.href;
+  public myid="testid";
+  public isdisabled=false;
   ngOnInit() {
   }
 greetuser(){
