@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-test',
   template: `
@@ -12,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   constructor() { }
-public name="Jacinta"
+  public name="Jacinta"
   ngOnInit() {
   }
 
