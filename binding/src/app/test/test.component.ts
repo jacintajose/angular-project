@@ -17,7 +17,11 @@ import { Component, OnInit } from '@angular/core';
              <h2 [style.color]="haserror ? 'red' :'green'">style binding</h2>
              <h2 [style.color]="highlightcolor">style binding2</h2>
              <h2 [ngStyle]="titlestyles">style binding</h2>
-             
+
+             <button (click)="onClick()">WELCOME</button>
+             {{welcomebutton}}
+             <button (click)="onCli($event)">CLICK</button>
+             {{clickbutton}}
              <h2>{{2+2}}</h2>
              <h2>{{"welcome  "+ name}}
              <h2>{{name.length}}</h2>
@@ -51,6 +55,8 @@ export class TestComponent implements OnInit {
   public haserror=true;
   public isspecial=true;
   public highlightcolor="orange";
+  public welcomebutton="";
+  public clickbutton="";
   public titlestyles={
     color:"blue",
     fontstyle:"italic"
@@ -66,5 +72,15 @@ export class TestComponent implements OnInit {
   }
 greetuser(){
   return "Hello"+this.name;
+}
+
+onClick(){
+  console.log('welcome jacinta jose')
+  this.welcomebutton='welcome jacinta jose';
+  console.log('welcome to window')
+}
+onCli(event){
+  console.log(event)
+  this.clickbutton='CLICK CLICK';
 }
 }
