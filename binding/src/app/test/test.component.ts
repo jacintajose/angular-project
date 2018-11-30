@@ -14,7 +14,10 @@ import { Component, OnInit } from '@angular/core';
              <h2 [class.text-danger]="haserror">codevolution</h2>
              <h2 [ngClass]="messageclasses"> codevolution</h2>
 
-
+             <h2 [style.color]="haserror ? 'red' :'green'">style binding</h2>
+             <h2 [style.color]="highlightcolor">style binding2</h2>
+             <h2 [ngStyle]="titlestyles">style binding</h2>
+             
              <h2>{{2+2}}</h2>
              <h2>{{"welcome  "+ name}}
              <h2>{{name.length}}</h2>
@@ -47,6 +50,11 @@ export class TestComponent implements OnInit {
   public successclass="text-success";
   public haserror=true;
   public isspecial=true;
+  public highlightcolor="orange";
+  public titlestyles={
+    color:"blue",
+    fontstyle:"italic"
+  }
   public messageclasses={
     "text-success": !this.haserror,
     "text-danger": this.haserror,
