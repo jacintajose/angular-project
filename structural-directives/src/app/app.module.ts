@@ -4,11 +4,13 @@ import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CompComponent } from './comp/comp.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CompComponent 
+    CompComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
