@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-comp',
@@ -33,6 +33,9 @@ import { Component, OnInit } from '@angular/core';
 
 </div>
 
+<h2>{{"Hello " + parentData}}</h2>
+<button (click)="fireevent()">send event </button>
+
  <div *ngFor="let col of colors; index as i">
  <h3>{{i}} {{col}}</h3>
  </div>
@@ -58,9 +61,13 @@ displayname=false;
 display=true;
 public color="red";
 public colors=["red", "blue", "green", "yellow"];
+@Input() public parentData;
+@Output() public childevent=new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
-
+fireevent(){
+  this.childevent.emit('HEY HELLOOO');
+}
 }

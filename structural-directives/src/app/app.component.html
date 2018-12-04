@@ -2,8 +2,10 @@
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
+     {{ message }}
+
  
 
 <div>
-  <app-comp></app-comp>
+  <app-comp (childevent)="message =$event" [parentData]="name"></app-comp>
 </div>
