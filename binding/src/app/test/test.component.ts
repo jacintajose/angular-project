@@ -18,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
              <h2 [style.color]="highlightcolor">style binding2</h2>
              <h2 [ngStyle]="titlestyles">style binding</h2>
 
-             <input [(ngModel)]="namme" type="text">
+             <input [(ngModel)ET]="namme" type="text">
              {{namme}}
              
 
