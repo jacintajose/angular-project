@@ -18,6 +18,13 @@ import { Component, OnInit } from '@angular/core';
              <h2 [style.color]="highlightcolor">style binding2</h2>
              <h2 [ngStyle]="titlestyles">style binding</h2>
 
+             <input [(ngModel)]="namme" type="text">
+             {{namme}}
+             
+
+             <input #myinput type="text">
+             <button (click)="logmessage(myinput.value)">log</button>
+
              <button (click)="onClick()">WELCOME</button>
              {{welcomebutton}}
              <button (click)="onCli($event)">CLICK</button>
@@ -45,6 +52,7 @@ import { Component, OnInit } from '@angular/core';
   `]
 })
 export class TestComponent implements OnInit {
+  public namme="";
 
   constructor() { }
   public name="Jacinta";
@@ -82,5 +90,8 @@ onClick(){
 onCli(event){
   console.log(event)
   this.clickbutton='CLICK CLICK';
+}
+logmessage(value){
+  console.log(value)
 }
 }
