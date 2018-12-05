@@ -15,6 +15,13 @@ import { Component, OnInit } from '@angular/core';
   <h2>{{1.2.345 | number:'3.1-2'}}</h2>
   <h2>{{0.45 | percent}}</h2>
   <h2>{{0.45 | currency}}</h2>
+  <h2>{{date}}</h2>
+  <h2>{{date | date:'short'}}</h2>
+  <h2>{{date | date:'shortDate'}}</h2>
+  <h2>{{date | date:'shortTime'}}</h2>
+
+
+
 
 
 
@@ -28,6 +35,7 @@ public person ={
   firstname : "Tom",
   lastname : "Victor"
 }
+public date= new Date();
   constructor() { }
 
   ngOnInit() {
