@@ -7,7 +7,9 @@ import { CompComponent } from './comp/comp.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ServicesComponent } from './services/services.component';
 import { EmployeComponent } from './employe/employe.component';
-
+import {EmployeeService} from './employee.service';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,9 +21,11 @@ import { EmployeComponent } from './employe/employe.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    HttpClient
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
