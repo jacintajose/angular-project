@@ -5,8 +5,8 @@ import { EmployeeService } from '../employee.service';
   selector: 'employee-list',
   template: `
   <h2>Employee list</h2>
-  <ul *ngFor="let employees of employees">
-  <li> {{employees.name}} </li>
+  <ul *ngFor="let employee of employees">
+  <li> {{employee.name}} </li>
   </ul>
   `,
   styles: []
